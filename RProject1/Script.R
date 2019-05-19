@@ -1,5 +1,5 @@
 library(jsonlite)
-data <- fromJSON("C:/Tools/avia/report.json")
+data <- fromJSON("data/report.json")
 #print(data)
 data1 <- subset.data.frame(data, !is.na(data$imei), select = c('imei', 'XPO', "VZW", "OE", "FD"))
 total <- nrow(subset.data.frame(data, !is.na(data$imei)))
