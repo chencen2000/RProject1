@@ -8,7 +8,7 @@ report_func <- function(report.fn) {
         print(sprintf("VZW vs XPO: %.1f %%", 100 * nrow(subset.data.frame(data, data$XPO == data$VZW)) / total))
         print(sprintf("FD vs VZW: %.1f %%", 100 * nrow(subset.data.frame(data, data$FD == data$VZW)) / total))
         print(sprintf("FD vs XPO: %.1f %%", 100 * nrow(subset.data.frame(data, data$FD == data$XPO)) / total))
-        print(sprintf("FD vs VZW|XPO: %.1f %%", 100 * nrow(subset.data.frame(data, (data$FD == data$VZW|data$FD == data$XPO))) / total))
+        print(sprintf("FD vs VZW|XPO: %.1f %%", 100 * nrow(subset.data.frame(data, (data$FD == data$VZW | data$FD == data$XPO))) / total))
         print(sprintf("OE vs VZW: %.1f %%", 100 * nrow(subset.data.frame(data, data$OE == data$VZW)) / total))
         print(sprintf("OE vs XPO: %.1f %%", 100 * nrow(subset.data.frame(data, data$OE == data$XPO)) / total))
     }
@@ -16,3 +16,7 @@ report_func <- function(report.fn) {
         print("missing report file.")
     }
 }
+
+
+fn='C:/projects/local/GradeChecker/GradeChecker/bin/Debug/report.json'
+report_func(fn)
