@@ -9,7 +9,14 @@
     <Platform Condition="'$(Platform)' == ''">AnyCPU</Platform>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupFile>Script.R</StartupFile>
+    <StartupFile>test_1.R</StartupFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <ResetReplOnRun>False</ResetReplOnRun>
+    <CommandLineArgs />
+    <RemoteProjectPath>~/</RemoteProjectPath>
+    <TransferFilesFilter>*.r;*.rmd;*.sql;*.md;*.cpp</TransferFilesFilter>
+    <TransferProjectOnRun>True</TransferProjectOnRun>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
